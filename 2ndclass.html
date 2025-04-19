@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Key words in JavaScript</title>
+</head>
+<body>
+    <script>
+
+// the basic use of keyword  is to give the accessibility for the particular things!
+
+        // ======= using var keyword ========//
+
+/* var is like global access modifier and if any variable is declared it will be treated as like global variable
+var is similar like without using keyword to declare the variable
+for example:- 
+var a = 10;   b = 10;
+here both the variables are like global variable , if see second one i.e b=10; this will be same as var b = 10; 
+and now atpresent it is outdated
+*/
+
+        /*
+        🔹 var
+        Scope: Functional scope (it works in the whole function, not just the block)
+
+        Can change value? Yes ✅
+
+        Use when?
+        ❌ Don't use var unless you're working with very old JavaScript.
+        ✅ In modern JavaScript, prefer let or const.*/
+
+        
+        var a = 10;// global variable a stored 10;
+        console.log(a);//result with in block it is accessed : 10
+        {
+            console.log(a); // subblock and it is accessed : 10
+            var b = 20; // declaring and initializing the another variable b using var keyword stores 20
+            console.log(b);// result : 20
+        }
+        console.log(b);// the b is global so it will accessed no erros result: 20;
+
+
+//   ========================= let keyowrd ================================= //
+
+// let keyword tell that a thing that can be only accessed within the block itself which means if let is specified with variable then it will be accessed only with in the block outside the block it will not visible or it was undefined
+/* let is like local thing ,which will be accessed within the bloack and subblocks of it */
+       
+        /*🔹 let
+            Scope: Block scope (only works inside { } like if, loop, or function blocks)
+
+            Can change value? Yes ✅
+
+            Use when?
+            ➤ Use let when you need to change the value of a variable later.*/
+
+        let a1 = 10;// local variable a stored 10;
+        console.log(a1);//result with in block it is accessed : 10
+        {
+            console.log(a1); // subblock and it is accessed : 10
+            let b1 = 20; // declaring and initializing the another variable b using var keyword stores 20
+            console.log(b1);// result : 20
+        }
+        // console.log(b1);// the b is local so it will not_accessed heance erros result: uncaught referenceERROR: b1 is not defined;
+
+
+//   ========================= const keyowrd ================================= //
+// the scope is similary to the let but main difference is variable reassignment that's the main change in this 
+        
+
+        /*
+        🔹 const
+        Scope: Block scope (same as let)
+
+        Can change value? No ❌
+
+        Use when?
+        ➤ Use const when you don’t want the variable to change (constant).*/
+
+        const a2 = 30;//  variable a stored 10;
+        console.log(a2);//result with in block it is accessed : 10
+        // a2 = 50; it will leading to error because we trying to change the variable value or reassigning the value of variable
+        {
+            console.log(a2); // subblock and it is accessed : 10
+            const b2 = 40; // declaring and initializing the another variable b using var keyword stores 20
+            console.log(b2);// result : 20
+        }
+        // console.log(b2);// the b is global so it will accessed no erros result: 20;   //// this will lead error because the scope of b is within the block and allowed in subblock but not outside the block !
+
+    </script>
+</body>
+</html>

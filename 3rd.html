@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators in JavaScript</title>
+</head>
+<body>
+<script>
+    let a = 10;
+    let b = 11;
+
+    // -------------------------------
+    // 🔸 Arithmetic Operators
+    // -------------------------------
+    // These are basic math operators. They return a number.
+
+    console.log("addition: ", a + b);          // ➤ 21
+    console.log("subtraction: ", a - b);       // ➤ -1
+    console.log("division: ", a / b);          // ➤ 0.909...
+    console.log("multiplication: ", a * b);    // ➤ 110
+    console.log("exponent: ", a ** b);         // ➤ a to the power of b (10^11)
+    console.log("modulus: ", a % b);           // ➤ Remainder when 10 is divided by 11 = 10
+
+    // -------------------------------
+    // 🔸 Increment & Decrement
+    // -------------------------------
+    // These operators change the value of the variable by 1
+
+    // Post-Increment: First uses value, then increases
+    console.log("post increment: ", a++);      // ➤ 10, then a becomes 11
+    // Post-Decrement: First uses value, then decreases
+    console.log("post decrement: ", a--);      // ➤ 11, then a becomes 10 again
+    // Pre-Increment: Increases first, then uses
+    console.log("pre increment: ", ++a);       // ➤ 11
+    // Pre-Decrement: Decreases first, then uses
+    console.log("pre decrement: ", --a);       // ➤ 10
+
+    // -------------------------------
+    // 🔸 Assignment Operators
+    // -------------------------------
+    let x = 10;
+
+    // Add and assign
+    console.log(x += 2);  // x = x + 2 ➤ 12
+    // Subtract and assign
+    console.log(x -= 2);  // x = x - 2 ➤ 10
+    // Multiply and assign
+    console.log(x *= 2);  // x = x * 2 ➤ 20
+    // Divide and assign
+    console.log(x /= 2);  // x = x / 2 ➤ 10
+    // Modulo and assign
+    console.log(x %= 2);  // x = x % 2 ➤ 0
+
+    // Exponent and assign
+    x = 2;
+    console.log(x **= 2); // x = x ** 2 ➤ 4
+
+    // -------------------------------
+    // 🔸 Comparison Operators
+    // -------------------------------
+    // These return a Boolean value (true/false)
+
+    // == compares values only (type is ignored)
+    console.log(100 == '100');   // true
+    console.log(100 == 100);     // true
+
+    // === compares value AND type
+    console.log(100 === 100);    // true
+    console.log(100 === '100');  // false — string and number are not the same //strickly equal to
+
+    // != checks if values are NOT equal (ignores type)
+    console.log(100 != '100');   // false — values match
+
+    // !== checks if values or types are NOT equal
+    console.log(100 !== '100');  // true — type mismatch// stirckly not equal to
+
+    console.log("not using the string in operand");
+
+    // These will be false because both value and type are same
+    console.log(100 != 100);     // false
+    console.log(100 !== 100);    // false // another name strickly not equal to
+
+    // -------------------------------
+    // ✅ Summary of Operators
+    // -------------------------------
+    /*
+    🔹 Arithmetic: +, -, *, /, %, ** 
+       ➤ Used in calculations
+
+    🔹 Assignment: =, +=, -=, *=, /=, %=, **=
+       ➤ Used to update variables
+
+    🔹 Comparison: ==, ===, !=, !==, >, <, >=, <=
+       ➤ Used in decisions (if-else, loops)
+
+    🔹 Logical: && (and), || (or), ! (not)
+       ➤ Used to combine conditions (not shown here but useful in conditions)
+
+    ✅ == is loose equality (value only)
+    ✅ === is strict equality (value + type)
+    ✅ Prefer === and !== in modern JavaScript for fewer bugs
+
+    ⚠️ Always remember:
+    - Strings and numbers are NOT the same (`"10"` ≠ `10` in type)
+    - Always use `let` or `const` to declare variables (not `var`)
+    */
+</script>
+</body>
+</html>
