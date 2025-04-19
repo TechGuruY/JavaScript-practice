@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Data Types and Concepts</title>
+</head>
+<body>
+
+<script>
+  // JavaScript is a dynamically typed language.
+  // This means we don't have to define the data type, it is automatically set when we assign a value.
+
+  // Let's start by assigning a number
+  age = 21; // this is a number (integer)
+  console.log(typeof age); // typeof tells us the data type
+  console.log(age); // prints 21
+
+  // Now assign a string (text)
+  age = "Durgaprasad"; // now 'age' is holding a string
+  console.log(typeof age); // prints 'string'
+  console.log(age); // prints 'Durgaprasad'
+
+  // Now assign a boolean (true or false)
+  age = true; // booleans are used for conditions like yes/no, true/false
+  console.log(typeof age); // prints 'boolean'
+  console.log(age); // prints true
+
+  // Assigning a floating-point number (decimal)
+  age = 21.21; // still considered a number
+  console.log(typeof age); // prints 'number'
+  console.log(age); // prints 21.21
+
+  // Assigning a single character
+  age = 'c'; // In JavaScript, there's no separate 'char' type. It's just a string of length 1.
+  console.log(typeof age); // prints 'string'
+  console.log(age); // prints 'c'
+
+  // Assigning a very long decimal number
+  age = 1.9999999999999999999999999999999; 
+  // JavaScript has limits for precision. It will round after a certain point.
+  console.log(typeof age); // prints 'number'
+  console.log(age); // prints a rounded number
+
+  // ------------------------------
+  // About semicolons (;)
+  // ------------------------------
+  // Semicolons are used to end a statement.
+  // JavaScript usually inserts them automatically, but it's a good habit to use them.
+  // It's *compulsory* in cases where the code might break or be misread without them.
+
+  // ------------------------------
+  // DOM (Document Object Model)
+  // ------------------------------
+  // When a webpage loads, the browser creates a tree-like structure from the HTML — this is the DOM.
+  // With JavaScript, we can access and change elements (like text, buttons, images) in the DOM.
+
+  // Example: document.body gives us the <body> element
+  // Example: document.getElementById("myDiv") gets an element with id="myDiv"
+
+  // ------------------------------
+  // Browser popup boxes
+  // ------------------------------
+
+  // 1. alert()
+  // Shows a message to the user. Just shows info, doesn't get input.
+  alert("Hello from JavaScript!"); // popup box with OK button
+
+  // 2. confirm()
+  // Asks the user a Yes/No (OK/Cancel) question
+  var isConfirmed = confirm("Do you want to continue?");
+  console.log("User clicked OK?", isConfirmed); // true if OK, false if Cancel
+
+  // 3. prompt()
+  // Asks the user to input something
+  var userName = prompt("What is your name?");
+  console.log("User entered:", userName); // whatever the user typed
+
+  // Note: alert, confirm, and prompt appear in popup boxes in the browser
+  // and pause the rest of the script until user interacts with them.
+
+</script>
+
+</body>
+</html>
